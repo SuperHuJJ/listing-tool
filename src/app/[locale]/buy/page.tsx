@@ -13,7 +13,7 @@ import Image from 'next/image'
 
 const texts: Record<string, any> = {
   zh: {
-    title: '积分兑换',
+    title: '额度兑换',
     subtitle: '专业 AI 工具，即刻提升跨境 Listing 效率',
     benefits: [
       { icon: <Zap className="h-5 w-5" />, text: '比手写快 100 倍，DeepSeek 专业调校' },
@@ -25,14 +25,14 @@ const texts: Record<string, any> = {
     loginRequired: '请先登录',
     backToHome: '返回主页',
     popular: '🔥 最受欢迎',
-    perCredit: '/额度',
+    perCredit: '/次',
     scanTitle: '微信扫码获取额度',
     scanDesc: '请使用微信扫一扫',
     cancel: '取消',
     success: '额度已到账！',
   },
   en: {
-    title: 'Credit Exchange',
+    title: 'Quota Exchange',
     subtitle: 'Professional AI tool to boost your cross-border listing efficiency',
     benefits: [
       { icon: <Zap className="h-5 w-5" />, text: '100x faster than manual, tuned with DeepSeek' },
@@ -44,11 +44,11 @@ const texts: Record<string, any> = {
     loginRequired: 'Please login first',
     backToHome: 'Back to Home',
     popular: '🔥 Most Popular',
-    perCredit: '/credit',
-    scanTitle: 'Scan with WeChat',
+    perCredit: '/use',
+    scanTitle: 'Scan to Get Quota',
     scanDesc: 'Please scan with WeChat',
     cancel: 'Cancel',
-    success: 'Credits added!',
+    success: 'Quota added!',
   },
 }
 
@@ -65,19 +65,16 @@ export default function BuyCreditsPage() {
     setLoadingPlan(planId)
     try {
       const session = await supabase.auth.getSession()
-      const token = session.data.session?.access_token
-      if (!token) {
+      const user = session.data.session?.user
+      if (!user) {
         toast.error(t.loginRequired)
         router.push('/auth')
         return
       }
       const res = await fetch('/api/create-wechat-order', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ planId, locale }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ planId, locale, userId: user.id }),
       })
       const data = await res.json()
       if (data.qrCode) {
@@ -108,7 +105,7 @@ export default function BuyCreditsPage() {
   }
 
   useEffect(() => {
-    return () => clearInterval(pollingRef.current)
+    return () => { if (pollingRef.current) clearInterval(pollingRef.current) }
   }, [])
 
   const currencySymbol = locale === 'zh' ? '¥' : '$'
@@ -181,7 +178,6 @@ export default function BuyCreditsPage() {
           })}
         </div>
 
-        {/* 小程序码弹窗 */}
         {qrCode && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white p-8 rounded-2xl shadow-card text-center">
@@ -193,7 +189,7 @@ export default function BuyCreditsPage() {
                 className="mt-4"
                 onClick={() => {
                   setQrCode(null)
-                  clearInterval(pollingRef.current)
+                  if (pollingRef.current) clearInterval(pollingRef.current)
                 }}
               >
                 {t.cancel}
