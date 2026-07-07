@@ -1,0 +1,77 @@
+{
+  "Home": {
+    "title": "AI Listing 生成器",
+    "subtitle": "几秒钟内创建优化的产品列表。",
+    "signIn": "登录",
+    "signUpFree": "免费注册",
+    "aiListingTool": "AI Listing 工具",
+    "credits": "额度",
+    "history": "历史记录",
+    "signOut": "退出登录",
+    "buyCredits": "获取额度",
+    "productDetails": "产品详情",
+    "platform": "平台",
+    "language": "语言",
+    "productName": "产品名称",
+    "keyFeatures": "主要特点（每行一个）",
+    "mainKeywords": "核心关键词，逗号分隔",
+    "generate": "生成 Listing",
+    "generating": "生成中...",
+    "generatedListing": "生成的 Listing",
+    "titleLabel": "标题",
+    "bulletPoints": "五点描述",
+    "description": "产品描述",
+    "searchTerms": "搜索词",
+    "copied": "已复制!",
+    "fillAllFields": "请填写所有字段",
+    "listingGenerated": "Listing 生成成功!",
+    "generationFailed": "生成失败"
+  },
+  "Auth": {
+    "signIn": "登录",
+    "signUp": "创建账户",
+    "email": "邮箱",
+    "password": "密码",
+    "processing": "处理中...",
+    "checkEmail": "请检查邮箱确认你的账户!",
+    "loggedIn": "登录成功!",
+    "haveAccount": "已有账户?",
+    "noAccount": "还没有账户?",
+    "authFailed": "认证失败",
+    "selectLanguage": "选择语言"
+  },
+  "History": {
+    "title": "生成历史",
+    "noListings": "还没有生成记录。",
+    "viewDetails": "查看完整 Listing",
+    "untitled": "未命名",
+    "titleLabel": "标题",
+    "bulletPoints": "五点描述",
+    "description": "产品描述",
+    "searchTerms": "搜索词"
+  },
+  "Lang": {
+    "switch": "English"
+  },
+  "Buy": {
+    "title": "额度兑换",
+    "basic": "基础包",
+    "standard": "标准包",
+    "pro": "专业包",
+    "buyNow": "立即获取",
+    "loading": "处理中...",
+    "loginRequired": "请先登录",
+    "backToHome": "返回主页",
+    "popular": "🔥 最受欢迎",
+    "perCredit": "/次",
+    "scanTitle": "微信扫码获取额度",
+    "scanDesc": "请使用微信扫一扫",
+    "cancel": "取消",
+    "success": "额度已到账！"
+  },
+  "Success": {
+    "title": "兑换成功！",
+    "description": "额度已添加到你的账户",
+    "backHome": "返回主页"
+  }
+}

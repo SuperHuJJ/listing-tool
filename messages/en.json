@@ -1,0 +1,77 @@
+{
+  "Home": {
+    "title": "AI Listing Generator",
+    "subtitle": "Create optimized product listings in seconds.",
+    "signIn": "Sign In",
+    "signUpFree": "Sign Up Free",
+    "aiListingTool": "AI Listing Tool",
+    "credits": "Quota",
+    "history": "History",
+    "signOut": "Sign Out",
+    "buyCredits": "Get Quota",
+    "productDetails": "Product Details",
+    "platform": "Platform",
+    "language": "Language",
+    "productName": "Product name",
+    "keyFeatures": "Key features (one per line)",
+    "mainKeywords": "Main keywords, comma separated",
+    "generate": "Generate Listing",
+    "generating": "Generating...",
+    "generatedListing": "Generated Listing",
+    "titleLabel": "Title",
+    "bulletPoints": "Bullet Points",
+    "description": "Description",
+    "searchTerms": "Search Terms",
+    "copied": "Copied!",
+    "fillAllFields": "Please fill all fields",
+    "listingGenerated": "Listing generated!",
+    "generationFailed": "Generation failed"
+  },
+  "Auth": {
+    "signIn": "Sign In",
+    "signUp": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "processing": "Processing...",
+    "checkEmail": "Check your email to confirm your account!",
+    "loggedIn": "Logged in successfully!",
+    "haveAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "authFailed": "Authentication failed",
+    "selectLanguage": "Select Language"
+  },
+  "History": {
+    "title": "Generation History",
+    "noListings": "No listings generated yet.",
+    "viewDetails": "View full listing",
+    "untitled": "Untitled",
+    "titleLabel": "Title",
+    "bulletPoints": "Bullet Points",
+    "description": "Description",
+    "searchTerms": "Search Terms"
+  },
+  "Lang": {
+    "switch": "中文"
+  },
+  "Buy": {
+    "title": "Quota Exchange",
+    "basic": "Basic",
+    "standard": "Standard",
+    "pro": "Pro",
+    "buyNow": "Get Now",
+    "loading": "Processing...",
+    "loginRequired": "Please login first",
+    "backToHome": "Back to Home",
+    "popular": "🔥 Most Popular",
+    "perCredit": "/use",
+    "scanTitle": "Scan to Get Quota",
+    "scanDesc": "Please scan with WeChat",
+    "cancel": "Cancel",
+    "success": "Quota added!"
+  },
+  "Success": {
+    "title": "Exchange Successful!",
+    "description": "Quota has been added to your account",
+    "backHome": "Back to Home"
+  }
+}
