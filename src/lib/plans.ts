@@ -6,14 +6,6 @@ export interface CreditPlan {
   popular?: boolean
 }
 
-export interface CreditPlan {
-  id: string
-  name: { zh: string; en: string }
-  credits: number
-  price: { zh: number; en: number }
-  popular?: boolean
-}
-
 export const creditPlans: CreditPlan[] = [
   {
     id: 'starter',
