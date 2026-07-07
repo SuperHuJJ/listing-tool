@@ -25,6 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ? 'AI驱动的跨境Listing生成工具，支持Amazon/Shopify/eBay多平台，一键生成高质量产品标题、五点描述、搜索词，10倍提升文案效率。'
       : 'AI-powered cross-border listing generator. Supports Amazon/Shopify/eBay. Generate high-quality titles, bullet points, descriptions, and search terms in seconds.',
     keywords: 'AI Listing生成, Amazon文案, 跨境电商工具, Listing优化, 关键词研究, 竞品分析, AI Listing Generator, Amazon copywriting, cross-border ecommerce, listing optimization',
+    other: {
+      'baidu-site-verification': 'codeva-3Vt49D6Bp3',
+      'google-site-verification': 'googleaeeb30f50256d0a7',
+    },
   }
 }
 
