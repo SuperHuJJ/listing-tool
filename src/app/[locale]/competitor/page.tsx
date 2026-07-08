@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from '@/i18n/navigation'
 import { useLocale } from 'next-intl'
 import { supabase } from '@/lib/supabase/client'
@@ -52,6 +52,14 @@ export default function CompetitorPage() {
   const [productName, setProductName] = useState('')
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<string>('')
+
+  // ===== 新增：SEO 标题 =====
+  useEffect(() => {
+    document.title = locale === 'zh'
+      ? '竞品Listing分析工具 | 找出弱点超越对手'
+      : 'Competitor Listing Analyzer | Find Weaknesses & Outrank Rivals'
+  }, [locale])
+  // ===== 新增结束 =====
 
   const handleAnalyze = async () => {
     if (!content.trim()) {

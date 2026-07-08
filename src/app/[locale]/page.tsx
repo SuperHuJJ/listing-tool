@@ -59,6 +59,13 @@ export default function Home() {
   const [trialUsage, setTrialUsage] = useState<Record<string, number>>({})
   const [emailConfirmed, setEmailConfirmed] = useState(false)
 
+
+  useEffect(() => {
+    document.title = locale === 'zh'
+      ? 'AI Listing生成器 | Amazon/Shopify/eBay文案一键生成'
+      : 'AI Listing Generator | Amazon/Shopify/eBay Copywriting Tool'
+    }, [locale])
+
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)

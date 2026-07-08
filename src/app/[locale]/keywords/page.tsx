@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from '@/i18n/navigation'
 import { useLocale } from 'next-intl'
 import { supabase } from '@/lib/supabase/client'
@@ -44,6 +44,14 @@ export default function KeywordsPage() {
   const [keyword, setKeyword] = useState('')
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<string>('')
+
+  // ===== 新增：SEO 标题 =====
+  useEffect(() => {
+    document.title = locale === 'zh'
+      ? 'Amazon关键词研究工具 | 长尾词挖掘与竞争度分析'
+      : 'Amazon Keyword Research Tool | Long-tail Keywords & Competition Analysis'
+  }, [locale])
+  // ===== 新增结束 =====
 
   const handleResearch = async () => {
     if (!keyword.trim()) {

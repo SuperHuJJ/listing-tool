@@ -90,6 +90,12 @@ export default function VersionsPage() {
   const [results, setResults] = useState<VersionResult[]>([])
 
   useEffect(() => {
+    document.title = locale === 'zh'
+      ? '多版本Listing生成 | 3种风格一键对比'
+      : 'Multi-Version Listing Generator | 3 Styles One-Click Comparison'
+  }, [locale])
+
+  useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
       if (session) fetchProfile(session)

@@ -16,15 +16,17 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
+  const isZh = locale === 'zh'
+
   return {
     title: {
-      default: locale === 'zh' ? 'AI Listing Tool - 跨境电商AI文案生成器' : 'AI Listing Tool - Cross-Border AI Listing Generator',
+      default: isZh ? 'AI Listing生成器 | Amazon/Shopify/eBay文案一键生成' : 'AI Listing Generator | Amazon/Shopify/eBay Copywriting Tool',
       template: '%s | AI Listing Tool'
     },
-    description: locale === 'zh'
-      ? 'AI驱动的跨境Listing生成工具，支持Amazon/Shopify/eBay多平台，一键生成高质量产品标题、五点描述、搜索词，10倍提升文案效率。'
-      : 'AI-powered cross-border listing generator. Supports Amazon/Shopify/eBay. Generate high-quality titles, bullet points, descriptions, and search terms in seconds.',
-    keywords: 'AI Listing生成, Amazon文案, 跨境电商工具, Listing优化, 关键词研究, 竞品分析, AI Listing Generator, Amazon copywriting, cross-border ecommerce, listing optimization',
+    description: isZh
+      ? 'AI驱动的跨境Listing生成工具，支持Amazon/Shopify/eBay多平台，一键生成高质量产品标题、五点描述、搜索词，10倍提升文案效率。同时提供关键词研究、竞品分析、健康评分、多版本对比等功能。'
+      : 'AI-powered cross-border listing generator. Supports Amazon/Shopify/eBay. Generate high-quality titles, bullet points, descriptions, and search terms in seconds. Also provides keyword research, competitor analysis, health scoring, and multi-version comparison.',
+    keywords: 'AI Listing生成, Amazon文案, 跨境电商工具, Listing优化, 关键词研究, 竞品分析, 健康评分, 多版本生成, AI Listing Generator, Amazon copywriting, cross-border ecommerce, listing optimization, keyword research, competitor analysis',
     other: {
       'baidu-site-verification': 'codeva-3Vt49D6Bp3',
       'google-site-verification': 'googleaeeb30f50256d0a7',

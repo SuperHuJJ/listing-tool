@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from '@/i18n/navigation'
 import { useLocale } from 'next-intl'
 import { supabase } from '@/lib/supabase/client'
@@ -46,6 +46,14 @@ export default function ScorePage() {
   const [content, setContent] = useState('')
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<string>('')
+
+  // ===== 新增：SEO 标题 =====
+  useEffect(() => {
+    document.title = locale === 'zh'
+      ? 'Listing健康评分工具 | 多维度诊断与优化建议'
+      : 'Listing Health Score Tool | Multi-Dimension Diagnosis & Suggestions'
+  }, [locale])
+  // ===== 新增结束 =====
 
   const handleAnalyze = async () => {
     if (!content.trim()) {
