@@ -9,7 +9,13 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# 让百度验证文件不被强制重定向到 HTTPS
+# 百度验证：允许 HTTP 直接返回 200，不跳转 HTTPS
+[[redirects]]
+  from = "/baidu_verify_codeva-3Vt49D6Bp3.html"
+  to = "/baidu_verify_codeva-3Vt49D6Bp3.html"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/baidu_verify_codeva-8b7e3341070b661db4e92c0711ff2212.html"
   to = "/baidu_verify_codeva-8b7e3341070b661db4e92c0711ff2212.html"
