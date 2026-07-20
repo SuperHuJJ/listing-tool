@@ -178,6 +178,53 @@ If you're just starting out, don't rush to buy a bunch of annual software subscr
 For me, saving thousands a year on software is real, tangible profit.`,
     },
   },
+  // 第三篇文章
+  'store-group-listing-tool': {
+    zh: {
+      title: '店群做大量Listing，什么AI工具成本最低？',
+      date: '2026-07-20',
+      tags: ['亚马逊运营', '店群', 'AI工具', 'Listing生成'],
+      content: `做店群的朋友应该都懂，Listing量大起来之后，有两个成本是绕不开的：人工成本和软件成本。
+
+我之前帮一个做店群的朋友管过一段时间店铺，他手里有十几个店铺，每个店铺几十个产品。算下来一个月要上新几百个Listing。光是写文案这块，如果全部外包，一个月至少大几千块。如果自己写，一天什么事都别干了，光写Listing就够你忙的。
+
+后来他就开始找能批量生成Listing的工具。
+
+要求很简单：第一，生成的东西能看得过去，别太离谱就行；第二，成本得压下来，毕竟量大了，一条贵几块钱，几百条下来就不是小数目；第三，最好能按次算钱，别搞月费年费那一套，店群的店铺数不固定，多的时候十几家，少的时候几家，用月费不灵活。
+
+试了好几个，最后稳定在用一个。我帮他粗略算了笔账，确实划算。
+
+这个工具其实不是专门给店群做的，但它的收费方式正好适合店群：按次计费，不用包月。
+
+具体用法就是你把产品名、卖点、关键词扔进去，它自动把标题、五点描述、产品描述、搜索词全给你整出来。Amazon、Shopify、eBay三个平台都能用，语言也支持好几种，做跨站点铺货的话，不用来回切换工具。
+
+质量这块，实话实说，不是那种精雕细琢的精品文案。但你做店群的，本来就不需要每条Listing都满分，60分及格能上架就行。标题关键词该有的都有，五点描述卖点覆盖到位，搜索词也配齐了，基本上花几分钟调一下就能用。
+
+最关键的还是便宜。
+
+他买的那种是129块200次，摊下来六毛钱一条。一个月上两百个产品，一条六毛，一个月也就129。你去找兼职写，最便宜也得五块十块一条，质量还不一定比AI好。外包给写手的话，量大虽然能压价，但光沟通改稿就够烦的，来回折腾几次还不如自己写省心。
+
+他用了快两个月，现在基本流水线操作了：选品完把信息填进去，生成，花几分钟微调，直接传。原来搞一条得半小时，现在五分钟搞定。
+
+非要说缺点的话，就是竞品分析那个功能一次要扣2次额度，他觉得不太划算。但其他功能都是一次1次额度，Listing生成、关键词研究、评分这些，店群日常用足够了。
+
+给做店群的几个建议：
+
+1. 一个月上几百条Listing的话，按次付费真比月费软件省太多了。六毛钱一条的价，其他方式基本做不到。
+
+2. AI生成的别指望拿来就能直接用，店群要的是及格线以上的质量，不是艺术品。生成完自己花几分钟调一下，是目前最省事的办法。
+
+3. 做跨站点的话，留意工具能不能支持多语言，不然日本站、德国站还得另外找工具。
+
+总之，店群做Listing，核心就是省钱和提效。按次付费的AI工具，这两点都占了。`,
+    },
+    en: {
+      title: 'Best Low-Cost AI Tool for Bulk Amazon Listing Creation',
+      date: '2026-07-20',
+      tags: ['Amazon FBA', 'Bulk Listing', 'AI Tools', 'Listing Generation'],
+      content: `[English version - can be added later]`,
+    },
+  },
 }
 
 export default function BlogArticlePage() {
@@ -231,7 +278,7 @@ export default function BlogArticlePage() {
 
         <div className="mt-8 p-6 bg-brand-50 rounded-2xl text-center">
           <p className="text-slate-700 mb-3">
-            {locale === 'zh' ? '想体验按次付费的AI Listing工具？' : 'Want to try a pay-as-you-go AI Listing tool?'}
+            {locale === 'zh' ? '想体验按次付费的AI Listing工具？' : 'Want to try a pay-as-you-go AI listing tool?'}
           </p>
           <Button className="btn-primary" onClick={() => router.push('/')}>
             {locale === 'zh' ? '免费试用 AI Listing Tool' : 'Try AI Listing Tool for Free'}
